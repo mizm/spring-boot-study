@@ -8,7 +8,9 @@ import org.springframework.stereotype.Service;
 
 import miz.springboot.domain.Member;
 import miz.springboot.repository.MemberRepository;
+import org.springframework.transaction.annotation.Transactional;
 
+@Transactional
 public class MemberService {
 
 	private final MemberRepository memberRepository;
