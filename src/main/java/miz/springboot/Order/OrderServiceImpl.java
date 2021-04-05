@@ -1,12 +1,17 @@
 package miz.springboot.Order;
 
+import lombok.RequiredArgsConstructor;
 import miz.springboot.discount.DiscountPolicy;
 import miz.springboot.discount.FixDiscountPolicy;
 import miz.springboot.discount.RateDiscountPolicy;
 import miz.springboot.member.Member;
 import miz.springboot.member.MemberRepository;
 import miz.springboot.member.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
+@RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService{
 
     private final MemberRepository memberRepository;
@@ -16,10 +21,10 @@ public class OrderServiceImpl implements OrderService{
     // 누군가가 주입해줘야함
     private final DiscountPolicy discountPolicy;
 
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
-        this.memberRepository = memberRepository;
-        this.discountPolicy = discountPolicy;
-    }
+//    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+//        this.memberRepository = memberRepository;
+//        this.discountPolicy = discountPolicy;
+//    }
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
