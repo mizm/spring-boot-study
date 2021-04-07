@@ -1,6 +1,7 @@
 # spring-boot-study
 spring-boot-study
 
+# git test 입니다.
 # Solid
 1. SRP - 단일 책임 원칙
 2. OCP - 개방 폐쇄 원칙
